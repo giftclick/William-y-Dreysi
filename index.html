@@ -66,21 +66,21 @@
     </div>
     <div class="bible-quote">
         <h1 class="tittle-p reveal-left">Nuestro <br>sí acepto</h1>
-        <img src="assets/comp1.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <img src="assets/comp2.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <img src="assets/comp3.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <p class="quote">
+        <img src="assets/comp1.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <img src="assets/comp2.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <img src="assets/comp3.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <p class="quote reveal-right">
             "Uno solo puede ser vencido, pero dos pueden resistir.
             ¡La cuerda de tres hilos no se rompe fácilmente!"
         </p>
-        <p class="reference">Eclesiastés 4:12</p>
+        <p class="reference reveal-right">Eclesiastés 4:12</p>
     </div>
-    <div class="bible-quote2">
+    <div class="bible-quote2 reveal-left">
         <h1 class="tittle-p">Nuestro <br>compromiso</h1>
-        <img src="assets/fest1.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <img src="assets/fest3.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <img src="assets/fest4.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
-        <img src="assets/fest8.jpg" alt="Pareja tomados de la mano" class="quote-image" id="BW" />
+        <img src="assets/fest1.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <img src="assets/fest3.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <img src="assets/fest4.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
+        <img src="assets/fest8.jpg" alt="Pareja tomados de la mano" class="quote-image image-reveal" id="BW" />
         <p class="quote">
             "Por esto el hombre dejará a su padre y a su madre, y se unirá a su esposa, y los dos llegarán a ser un solo
             cuerpo. Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, que no lo separe el hombre."
@@ -660,16 +660,23 @@
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
             } else {
-                entry.target.classList.remove("active"); // opcional
+                // Si deseas que se repita la animación al hacer scroll hacia arriba:
+                entry.target.classList.remove("active");
             }
         });
     }, { threshold: 0.1 });
 
-    // Seleccionamos todos los elementos a observar
+    // Animaciones para textos
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
         observer.observe(el);
     });
 
+    // Animaciones para imágenes con cascada
+    document.querySelectorAll('.image-reveal').forEach((el, index) => {
+        el.style.setProperty('--delay', `${index * 0.2}s`);
+        observer.observe(el);
+    });
 </script>
+
 
 </html>
