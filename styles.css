@@ -14,6 +14,9 @@ html {
   background-color: #fff;
   font-family: Roboto, Arial;
   font-weight: 100;
+}
+
+.wrapper {
   overflow-x: hidden;
 }
 
@@ -467,9 +470,11 @@ footer>p {
 .reveal {
   transform: translateY(40px);
 }
+
 .reveal-left {
   transform: translateX(-60px);
 }
+
 .reveal-right {
   transform: translateX(60px);
 }
