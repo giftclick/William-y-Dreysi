@@ -14,6 +14,7 @@ html {
   background-color: #fff;
   font-family: Roboto, Arial;
   font-weight: 100;
+  overflow-x: hidden;
 }
 
 .text {
