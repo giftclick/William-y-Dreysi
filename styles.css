@@ -454,32 +454,33 @@ footer>p {
   color: white;
 }
 
-/* Animaciones Reveal */
-.reveal {
+.reveal,
+.reveal-left,
+.reveal-right {
   opacity: 0;
-  transform: translateY(40px);
   transition: all 0.8s ease-out;
   will-change: opacity, transform;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+/* Posición inicial */
+.reveal {
+  transform: translateY(40px);
 }
-
-/* Variantes adicionales */
 .reveal-left {
-  transform: translateX(-50px);
+  transform: translateX(-60px);
 }
-
 .reveal-right {
-  transform: translateX(50px);
+  transform: translateX(60px);
 }
 
+/* Activado al entrar en pantalla */
+.reveal.active,
 .reveal-left.active,
 .reveal-right.active {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0) translateY(0);
 }
+
 
 /* Suavidad para imágenes */
 .quote-image {

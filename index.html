@@ -653,23 +653,23 @@
                 (seconds < 10 ? '0' + seconds : seconds);
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            reveals.forEach((el) => observer.observe(el));
-        });
-    </script>
-
 </body>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            } else {
+                entry.target.classList.remove("active"); // opcional
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Seleccionamos todos los elementos a observar
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
+        observer.observe(el);
+    });
+
+</script>
 
 </html>
