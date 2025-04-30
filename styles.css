@@ -359,9 +359,70 @@ footer>p {
   margin-left: -35px;
 }
 
-.quote-image {
+#BW {
   filter: grayscale(100%);
 }
+
+.vestimenta-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.vestimenta-texto {
+  text-align: right;
+}
+
+.codigo-titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.codigo-tipo {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 0;
+  line-height: 1.4;
+}
+
+.vestimenta-divider {
+  height: 120px;
+  width: 2px;
+  background-color: black;
+  border-radius: 1px;
+}
+
+.vestimenta-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icono {
+  width: 40px;
+  height: auto;
+}
+
+.rol {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.rol small {
+  font-size: 12px;
+}
+
 
 @media (min-width: 456px) {
   body {
