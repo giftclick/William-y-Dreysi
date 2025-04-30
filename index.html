@@ -25,7 +25,16 @@
         <div class="background-image"></div>
         <h1>Nuestra<br>Boda</h1>
         <img src="assets/1.jpg" alt="Nuestra Boda" class="image-overlay">
-      </div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const bg = document.querySelector(".background-image");
+            const scrollY = window.scrollY;
+            // Ajusta el valor 0.5 para mayor o menor movimiento
+            bg.style.transform = `translateY(${scrollY * 0.5}px)`;
+        });
+    </script>
     <!-- Sección del mensaje e invitación -->
     <div class="invitation">
         <h1 class="names">William y Dreysi</h1>

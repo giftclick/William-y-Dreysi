@@ -55,10 +55,10 @@ a[href^="tel"] {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%; /* un poco más grande para dar efecto al desplazarse */
-  transform: translateY(-10%);
+  height: 120%;
   z-index: -2;
   will-change: transform;
+  transition: transform 0.1s linear;
 }
 
 .parallax::before {
