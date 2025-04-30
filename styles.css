@@ -491,7 +491,7 @@ footer>p {
 .image-reveal {
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 2s ease, transform 2s ease;
   will-change: opacity, transform;
 }
 
