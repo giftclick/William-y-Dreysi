@@ -409,7 +409,7 @@ footer>p {
   gap: 10px;
 }
 
-.icono {
+.icono svg {
   width: 40px;
   height: auto;
 }
