@@ -138,13 +138,32 @@
             </style>
             <img src="assets/LCD.jpg" alt="Descripción de la imagen" class="responsive-image reveal">
             <div class="map-responsive reveal" style="margin-top: 25px;">
-                <iframe 
-                    class="map-iframe" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.888558207729!2d-99.16962392416457!3d19.42702024095123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2b3f509719%3A0x6d201fa523a6e1c4!2sPalacio%20de%20Bellas%20Artes!5e0!3m2!1ses!2smx!4v1717281233434!5m2!1ses!2smx&output=embed&markers=color:red%7C19.4270202,-99.1670491" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Av, Proceres de la Independencia 3066 - S.J.L., pasando la estacion San Carlos, La Casona Dorada&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                            href="https://embed-googlemap.com">google map embed html</a></div>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            width: 600px;
+                            height: 400px;
+                        }
+
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            width: 600px;
+                            height: 400px;
+                        }
+
+                        .gmap_iframe {
+                            width: 600px !important;
+                            height: 400px !important;
+                        }
+                    </style>
+                </div>
             </div>
             <div class="video-container">
                 <video id="video" src="./assets/video.MP4" poster="./assets/LCD.jpg"></video>
@@ -152,7 +171,7 @@
             </div>
             <script>
                 const video = document.getElementById('video');
-            
+
                 function togglePlay() {
                     if (video.paused) {
                         video.play();
