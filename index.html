@@ -144,6 +144,73 @@
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
+            <div class="video-container">
+                <video id="video" src="./assets/video.MP4" poster="./assets/video-thumbnail.jpg"></video>
+                <div class="play-button" onclick="togglePlay()"></div>
+            </div>
+            <script>
+                const video = document.getElementById('video');
+            
+                function togglePlay() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+            </script>
+            <style>
+                /* Contenedor del video */
+                .video-container {
+                    position: relative;
+                    width: 90%;
+                    /* Ajusta el ancho para mantenerlo responsivo */
+                    max-width: 800px;
+                    margin: 20px auto;
+                    /* Centra el video debajo del mapa */
+                    border: 2px solid #ddd;
+                    /* Bordes suaves */
+                    border-radius: 10px;
+                    /* Esquinas redondeadas */
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    /* Sombra atractiva */
+                }
+
+                /* El video */
+                video {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+                /* Botón de reproducción */
+                .play-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                }
+
+                .play-button::before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 15px 0 15px 25px;
+                    border-color: transparent transparent transparent white;
+                }
+            </style>
         </div>
         <div class="bible-quote2 reveal-left">
             <h1 class="tittle-A reveal-left" style="text-align: center!important;">Regalos</h1>

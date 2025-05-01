@@ -1,5 +1,5 @@
 // Fecha del evento (YYYY-MM-DDTHH:MM:SS)
-const eventDate = new Date("2025-05-25T15:30:00").getTime();
+const eventDate = new Date("2025-05-31T18:30:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
